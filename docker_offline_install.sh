@@ -48,7 +48,7 @@ cat docker.tmp/pkg.txt | awk '{
 #get package name(with version)
 cat docker.tmp/name.txt | while read line
 do
-cat docker.tmp/pkg.txt | grep -i $line | sort -Vr | tail -n 1 >> docker.tmp/last.txt
+cat docker.tmp/pkg.txt | grep -i $line | sort -Vr | head -n 1 >> docker.tmp/last.txt
 done
 
 #download package
